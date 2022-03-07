@@ -27,13 +27,13 @@ namespace TheKata.Test
         public void Copy_A_Line_Of_Characters()
         {
 
-            ISource source = new Source("Vuyo" + "\n");
+            ISource source = new Source("aaaAB" + "\n");
             Copier copier = new Copier(source, destination);
 
             copier.Copy();
 
-            Assert.AreEqual(4, destination.setCharWasCalled);
-            Assert.AreEqual("Vuyo", destination.VerifyString());
+            Assert.AreEqual(5, destination.setCharWasCalled);
+            Assert.AreEqual("aaaAB", destination.VerifyString());
         }
     }
 }
